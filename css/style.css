@@ -150,7 +150,7 @@ nav{
 /* #19: Add border to card elements and use flex-basis of 325 px */
 .card{
   border: 2px solid #45ADDD;
-  flex-basis: 325 px;
+  flex-basis: 325px;
 }
 
 /* #20: Make the gallery invisible */
