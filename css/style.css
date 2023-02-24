@@ -1,0 +1,168 @@
+/* DEFAULT VIEW */
+
+/* #1: animate logo with keyframes */
+#logo{
+  animation: hw5_2023_move 5s;
+}
+
+@keyframes hw5_2023_move {
+    from {width: 25px;}
+    to {width: 475px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+/* #2: body element Poppins font and background image */
+body{
+   font-family: "Poppins", serif;
+   background-color: #f1f1f1;
+   background-image: url("../images/concrete_seamless.png")
+}
+
+/* #3: edit header tag for flex to match example */
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* #4: edit nav_links class flex to match example */
+.nav_links{
+  display: flex;
+  flex-direction: column;
+}
+
+/* #5: style links to be the same even after they have been visited (Challenge!) */
+.nav_links a:visited{
+  color: blue;
+}
+
+/* #6: style only direct children of card class with following specifications */
+.card > header{
+  background: #288088;
+  border: 2px solid #45ADAD;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+/* #7: style card class to match flex example (7 and 8 go together) */
+.card{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 450px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+/* #8: Edit pricing class to match example */
+.pricing{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* #9: Style images in the gallery class */
+.gallery img{
+  border: 10px solid #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
+
+/* #10: Edit css gallery class to match example using flex */
+.gallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+@media screen and (min-width: 900px) {
+
+/* #logo{
+  align-self: flex-start;
+} */
+
+  /* #11: Edit the css header tag and nav_links class to match example using flex-properties */
+header{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav_links{
+  flex-direction: row;
+}
+
+/* #12: Edit the css for the pricing and card properties to match the example */
+.card{
+  flex-basis: 275 px;
+}
+
+.pricing{
+  flex-direction: row;
+}
+
+/* #13: Modify the first header so it remains visible at the top of the screen even as they scroll down */
+body > header{
+  position: sticky;
+  top: 0;
+}
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+/* #14: The logo class should appear but not be animated */
+#logo{
+  animation: none;
+}
+
+}
+
+@media print{
+
+/* #15: Change the font of the body to Ariel with a Helvetica backup */
+body{
+  font-family: Ariel, Helvetica;
+}
+
+/* #16: Remove the background image */
+div{
+  background-image: none;
+}
+
+/* #17: Edit nav/nav_links elements so they are spaced according to print view */
+nav{
+  width: 85%
+}
+.nav_links{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* #18: Edit pricing class so elements align along the bottom */
+.pricing{
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+/* #19: Add border to card elements and use flex-basis of 325 px */
+.card{
+  border: 2px solid #45ADDD;
+  flex-basis: 325 px;
+}
+
+/* #20: Make the gallery invisible */
+#gallery, .gallery{
+  display: none;
+}
+
+/* #21: Add thumbs up without using list-style-type (it's okay if it they aren't yellow) (Challenge!) */
+.card ul li:nth-child(2)::after{
+  content: "\1f44d";
+}
+
+}
