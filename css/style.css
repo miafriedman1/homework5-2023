@@ -49,8 +49,6 @@ header{
 
 /* #7: style card class to match flex example (7 and 8 go together) */
 .card{
-  display: flex;
-  flex-direction: column;
   flex-basis: 450px;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -80,7 +78,7 @@ header{
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px){
 
 /* #logo{
   align-self: flex-start;
@@ -98,7 +96,7 @@ header{
 
 /* #12: Edit the css for the pricing and card properties to match the example */
 .card{
-  flex-basis: 275 px;
+  flex-basis: 275px;
 }
 
 .pricing{
